@@ -1,8 +1,8 @@
 # terraform {
 #   backend "azurerm" {
-#     resource_group_name  = "rg-nqaits-nonprod-syd-01-terraform"
-#     storage_account_name = "stnqaitsnonprodsyd01tf"
-#     container_name       = "con-nqaits-nonprod-nonprod-appservice"
+#     resource_group_name  = 
+#     storage_account_name = 
+#     container_name       = 
 #     key                  = "terraform.tfstate"
 #   }
 # }

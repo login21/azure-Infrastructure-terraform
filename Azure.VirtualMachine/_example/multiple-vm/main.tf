@@ -50,12 +50,12 @@ module "nic" {
 }
 
 data "azurerm_key_vault" "kv" {
-  name                = "kvnqaitscorenpsyd01cmk"
-  resource_group_name = "rg-nqaits-nonprod-syd-01-keyvault"
+  name                = "testkv"
+  resource_group_name = "testkvrg"
 }
 
 data "azurerm_key_vault_secret" "vm_password" {
-  name         = "nonprod-smartflow-vm"
+  name         = "test-vm"
   key_vault_id = data.azurerm_key_vault.kv.id
 }
 

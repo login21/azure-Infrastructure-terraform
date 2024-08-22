@@ -44,7 +44,7 @@ autoscale_configuration = {
 backend_address_pools = [
   {
     name  = "appgw-testgateway-australiaeast-bapool01"
-    fqdns = ["webapp-test-external.azurewebsites.net", ]
+    fqdns = ["webapp-test-test.azurewebsites.net", ]
   },
   {
     name         = "appgw-testgateway-australiaeast-bapool02"

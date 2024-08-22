@@ -52,8 +52,8 @@ module "nic" {
 }
 
 data "azurerm_key_vault" "kv" {
-  name                = "kvnqaitscorecmnsyd01cmk"
-  resource_group_name = "rg-nqaits-cmn-syd-01-keyvault"
+  name                = "testkv"
+  resource_group_name = "testkv-rg"
 }
 
 data "azurerm_key_vault_secret" "nonprd_jumphost_password" {

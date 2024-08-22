@@ -3,7 +3,6 @@
 # -------------------------------------------------------------
 module "resource_group" {
   source = "../../Azure.ResourceGroup"
-  #source = "git::ssh://git@ssh.dev.azure.com/v3/NQAITS/NQAITS%20Infra/nqaits-tf-modules//Azure.ResourceGroup"
   name     = var.name
   location = var.location
   tags     = var.tags
@@ -11,7 +10,6 @@ module "resource_group" {
 
 module "mssql_server" {
   source = "../mssql-server"
-  # source = "git::ssh://git@ssh.dev.azure.com/v3/NQAITS/NQAITS%20Infra/nqaits-tf-modules//Azure.SQLDatabase/mssql-server" 
   depends_on = [
     module.resource_group
   ]
@@ -28,7 +26,6 @@ module "mssql_server" {
 
 module "mssql_database" {
   source = "../mssql-database"
-  # source = "git::ssh://git@ssh.dev.azure.com/v3/NQAITS/NQAITS%20Infra/nqaits-tf-modules//Azure.SQLDatabase/mssql-database" 
   depends_on = [
     module.resource_group,
     module.mssql_server
@@ -48,7 +45,6 @@ module "mssql_database" {
 
 module "mssql_elasticpool" {
   source = "../mssql-elasticpool"
-  # source = "git::ssh://git@ssh.dev.azure.com/v3/NQAITS/NQAITS%20Infra/nqaits-tf-modules//Azure.SQLDatabase/mssql-elasticpool"
   depends_on = [
     module.resource_group,
     module.mssql_server
